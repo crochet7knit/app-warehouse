@@ -1,0 +1,20 @@
+private Integer id;                     //1 ,10, 20,30
+private String name;                    //electronic,telephone, prototive tech, audio&video tech
+private Category parentCategory;        //null,1,1,1
+private boolean active;                 //true, true, true, true
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+todo User class dagi     @ManyToMany
+                    private Set<Warehouse> warehouses;
+                    mana shu holatda ya'ni Set bn olishdan maqsad 1 ta userga
+                    1 ta ombor bir marta add qilishni ta'minlaydi. Bu SET ning
+                    xususiyatidan kelib chiqadi
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+todo 6-video Mahsulotning codini generatsiya qilish un
+    id sini generatsiya qilish mn. Buning un oxirgi
+    mahsulotning idisiga 1 ni qo'shish kk. Va STRING type
+    da bo'lishi kk.

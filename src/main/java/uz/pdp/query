@@ -1,0 +1,398 @@
+###
+POST http://localhost:8080/warehouse
+Content-Type: application/json
+
+{
+  "name": "RED"
+}
+
+###
+GET http://localhost:8080/warehouse
+
+###
+GET http://localhost:8080/warehouse/1
+
+###
+PUT http://localhost:8080/warehouse/1
+Content-Type: application/json
+
+{
+  "name": "WHITE"
+}
+
+###
+DELETE http://localhost:8080/warehouse/3
+##############################################
+
+###
+POST http://localhost:8080/currency
+Content-Type: application/json
+
+{
+  "name": "USD"
+}
+
+###
+GET http://localhost:8080/currency
+
+###
+GET http://localhost:8080/currency/1
+
+###
+PUT http://localhost:8080/currency/2
+Content-Type: application/json
+
+{
+  "name": "YUAN"
+}
+
+###
+DELETE http://localhost:8080/currency/2
+
+##############################################
+
+###
+POST http://localhost:8080/client
+Content-Type: application/json
+
+{
+  "name": "WHITE",
+  "phoneNumber": "+99891"
+}
+
+###
+GET http://localhost:8080/client
+
+###
+GET http://localhost:8080/client/1
+
+###
+PUT http://localhost:8080/client/4
+Content-Type: application/json
+
+{
+  "name": "WHITE-Yellow",
+  "phoneNumber": "+99891"
+}
+
+###
+DELETE http://localhost:8080/client/2
+##############################################
+
+###
+POST http://localhost:8080/measurement
+Content-Type: application/json
+
+{
+  "name": "metr"
+}
+
+###
+GET http://localhost:8080/measurement
+
+###
+GET http://localhost:8080/measurement/1
+
+###
+PUT http://localhost:8080/measurement/1
+Content-Type: application/json
+
+{
+  "name": "kilogram"
+}
+
+###
+DELETE http://localhost:8080/measurement/3
+
+##############################################
+
+###
+POST http://localhost:8080/supplier
+Content-Type: application/json
+
+{
+  "name": "BOTIR-ASAL",
+  "phoneNumber": "+99832"
+}
+
+###
+GET http://localhost:8080/supplier
+
+###
+GET http://localhost:8080/supplier/1
+
+###
+PUT http://localhost:8080/supplier/1
+Content-Type: application/json
+
+{
+  "name": "BOTIR-SUT",
+  "phoneNumber": "+99833"
+}
+
+###
+DELETE http://localhost:8080/supplier/5
+
+##############################################
+
+###
+POST http://localhost:8080/category
+Content-Type: application/json
+
+{
+  "name": "CAMILK",
+  "parentCategoryId": 5
+}
+
+###
+GET http://localhost:8080/category
+
+###
+GET http://localhost:8080/category/1
+
+###
+PUT http://localhost:8080/category/7
+Content-Type: application/json
+
+{
+  "name": "Camilk",
+  "parentCategoryId": 5
+}
+
+###
+DELETE http://localhost:8080/category/90
+
+##############################################
+###
+POST http://localhost:8080/user
+Content-Type: application/json
+
+{
+  "firstName": "AAA",
+  "lastName": "BBB",
+  "phoneNumber": "+99890",
+  "code": "LG",
+  "password": "YUL",
+  "warehouses": [
+    {
+      "warehouseId": 1
+    }]
+}
+
+###
+GET http://localhost:8080/user
+
+###
+GET http://localhost:8080/user/1
+
+###
+PUT http://localhost:8080/user/1
+Content-Type: application/json
+
+{
+  "firstName": "AAA",
+  "lastName": "BBB",
+  "phoneNumber": "+99890",
+  "code": "LG",
+  "password": "YUL",
+  "warehouses": [
+    {
+      "warehouseId": 1
+    }]
+}
+
+###
+DELETE http://localhost:8080/user/1
+
+##############################################
+###
+POST http://localhost:8080/attachment
+
+###
+GET http://localhost:8080/attachment/1
+
+##############################################
+
+###
+POST http://localhost:8080/product
+Content-Type: application/json
+
+{
+  "name": "SASA",
+  "categoryId": 1,
+  "photoId": 1,
+  "measurementId": 1
+}
+
+###
+GET http://localhost:8080/product
+
+###
+GET http://localhost:8080/product/1
+
+###
+PUT http://localhost:8080/product/1
+Content-Type: application/json
+
+{
+  "name": "SASAS",
+  "categoryId": 1,
+  "photoId": 1,
+  "measurementId": 2
+}
+
+###
+DELETE http://localhost:8080/product/9
+
+##############################################
+
+
+###
+POST http://localhost:8080/input
+Content-Type: application/json
+
+{
+  "date": "2022-03-03T07:44:25.415+00:00",
+  "warehouseId": 1,
+  "supplierId": 1,
+  "currencyId": 1,
+  "factureNumber": "0990",
+  "code": "0001"
+}
+
+###
+GET http://localhost:8080/input
+
+<> 2022-03-03T133225.200.json
+
+###
+GET http://localhost:8080/input/1
+
+###
+PUT http://localhost:8080/input/1
+Content-Type: application/json
+
+{
+  "date": "2022-03-03T07:44:25.415+00:00",
+  "warehouseId": 2,
+  "supplierId": 2,
+  "currencyId": 3,
+  "factureNumber": "0991",
+  "code": "0011"
+}
+
+###
+DELETE http://localhost:8080/input/7
+
+##############################################
+###
+POST http://localhost:8080/inputProduct
+Content-Type: application/json
+
+{
+  "productId": 1,
+  "amount": 90067,
+  "price": 8908,
+  "inputId": 1
+}
+
+###
+GET http://localhost:8080/inputProduct
+
+###
+GET http://localhost:8080/inputProduct/1
+
+###
+PUT http://localhost:8080/inputProduct/1
+Content-Type: application/json
+
+{
+  "productId": 1,
+  "amount": 90067,
+  "expireDate": "2022-03-07T07:44:25.415+00:00",
+  "price": 8908,
+  "inputId": 1
+}
+
+###
+DELETE http://localhost:8080/inputProduct/90
+
+##############################################
+
+###
+POST http://localhost:8080/output
+Content-Type: application/json
+
+{
+  "date": "2022-03-03T07:44:25.415+00:00",
+  "warehouseId": 1,
+  "clientId": 1,
+  "currencyId": 1,
+  "factureNumber": "0990",
+  "code": "0011"
+}
+
+###
+GET http://localhost:8080/output
+
+###
+GET http://localhost:8080/output/1
+
+###
+PUT http://localhost:8080/output/1
+Content-Type: application/json
+
+{
+  "date": "2022-05-03T07:44:25.415+00:00",
+  "warehouseId": 1,
+  "clientId": 1,
+  "currencyId": 3,
+  "factureNumber": "0990",
+  "code": "0011"
+}
+
+###
+DELETE http://localhost:8080/output/89
+
+##############################################
+
+###
+POST http://localhost:8080/outputProduct
+Content-Type: application/json
+
+{
+  "productId": 1,
+  "amount": 998.3,
+  "price": 333.0,
+  "outputId": 1
+}
+
+###
+GET http://localhost:8080/outputProduct
+
+###
+GET http://localhost:8080/outputProduct/1
+
+###
+PUT http://localhost:8080/outputProduct/1
+Content-Type: application/json
+
+{
+  "productId": 1,
+  "amount": 1000.3,
+  "price": 500.0,
+  "outputId": 1
+}
+
+###
+DELETE http://localhost:8080/outputProduct/90
+
+##############################################
+
+
+##############################################
+
+
+##############################################
+
+##############################################
